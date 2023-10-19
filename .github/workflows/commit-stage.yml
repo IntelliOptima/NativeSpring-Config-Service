@@ -1,3 +1,4 @@
+---
 name: Commit Stage
 on: push
 
@@ -79,7 +80,7 @@ jobs:
           with:
             registry: ${{ env.REGISTRY }}
             username: ${{ github.actor }}
-            password: ${{ secrets.GHCR_TOKEN }}
+            password: ${{ secrets.GITHUB_TOKEN }}
         - name: Publish container image
           run: docker push ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }}
 

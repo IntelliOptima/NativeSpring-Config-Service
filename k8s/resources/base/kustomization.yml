@@ -1,0 +1,7 @@
+resources:
+  - "./deployment.yml"
+  - "./service.yml"
+
+
+commonLabels:
+  app: config-service
